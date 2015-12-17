@@ -1,11 +1,9 @@
-from lib.deuces import Card, Deck, Evaluator
+from lib.deuces import Card, Deck
 from lib.decide import place_cards
-from lib.ofc_hand import Hand
+from lib.ofc_hand import Hand, return_hand_vals
 from lib.deuces.termcolor import colored
 import os
 import argparse
-
-evaluator = Evaluator()
 
 class Game:
 
@@ -85,12 +83,7 @@ class Game:
             temp_score = 6
             self.score += 6
         else:
-            c_top = evaluator.evaluate([], self.computer_hand.top)
-            c_middle = evaluator.evaluate([], self.computer_hand.middle)
-            c_bottom = evaluator.evaluate([], self.computer_hand.bottom)
-            p_top = evaluator.evaluate([], self.player_hand.top)
-            p_middle = evaluator.evaluate([], self.player_hand.middle)
-            p_bottom = evaluator.evaluate([], self.player_hand.bottom)
+            c_top, c_middle, c_bottom, p_top, p_middle, p_bottom = return_hand_vals(self.computer_hand, self.player_hand)
             temp_score = 0
             if c_top > p_top:
                 temp_score += 1

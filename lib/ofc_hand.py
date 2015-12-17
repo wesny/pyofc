@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 from lib.deuces import Card, Evaluator
 
 evaluator = Evaluator()
@@ -47,3 +49,12 @@ class Hand:
             return 7463*3
         else:
             return top_count + middle_count + bottom_count
+
+def return_hand_vals(computer_hand, player_hand):
+    c_top = evaluator.evaluate([], computer_hand.top)
+    c_middle = evaluator.evaluate([], computer_hand.middle)
+    c_bottom = evaluator.evaluate([], computer_hand.bottom)
+    p_top = evaluator.evaluate([], player_hand.top)
+    p_middle = evaluator.evaluate([], player_hand.middle)
+    p_bottom = evaluator.evaluate([], player_hand.bottom)
+    return c_top, c_middle, c_bottom, p_top, p_middle, p_bottom
