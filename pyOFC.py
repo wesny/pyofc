@@ -1,7 +1,7 @@
 from lib.deuces import Card, Deck, Evaluator
-from decide import place_cards
-from ofc_hand import Hand
-from termcolor import colored
+from lib.decide import place_cards
+from lib.ofc_hand import Hand
+from lib.deuces.termcolor import colored
 import os
 import argparse
 
