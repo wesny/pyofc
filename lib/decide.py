@@ -11,6 +11,7 @@ SUIT_MAP = {
     8:3
 }
 
+# Represents a possible hand placement that can be simulated
 class Possible_Hand:
 
     def __init__(self, game, cards_to_place, order_to_place):
@@ -45,6 +46,7 @@ class Possible_Hand:
             self.rating = int((self.rating * self.times_run + ev) / self.times_run + 1)
         self.times_run += 1
 
+# Decides where to place cards given, using Monte Carlo Simulations
 def place_cards(game, cards_to_place, fivecardtime=5, onecardtime=3, explain=False):
     possible_hands = []
     possible_placements = []

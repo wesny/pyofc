@@ -5,6 +5,7 @@ from lib.deuces.termcolor import colored
 import os
 import argparse
 
+# Contains the Game components and runs and evaluates the game itself
 class Game:
 
     def __init__(self):
@@ -103,7 +104,7 @@ class Game:
         self.print_screen()
         message = ''
         if temp_score == 0:
-            message = "You both busted!"
+            message = "You both busted or tied!"
         elif temp_score == -6:
             message = 'You busted or were scooped!'
         elif temp_score == 6:
@@ -155,7 +156,7 @@ class Game:
             hand_num += 1
         print "".join(["_" for i in xrange(99)])
             
-
+# Runs each game in a loop
 def play():
     game = Game()
     while(1):
@@ -164,12 +165,12 @@ def play():
             game.run_1_card()
         game.evaluate_hands()
 
-
+# Parses and evaluates/stores arguments given at launch
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Play Open Face Chinese Poker')
     parser.add_argument('--fivecardtime', '-f', type=int, default=5, help='# of seconds used for computer to place initial cards (Default: 5)')
     parser.add_argument('--onecardtime', '-o', type=int, default=3, help='# of seconds used for computer to place subsequent cards (Default: 3)')
-    parser.add_argument("-e", "--explain", action="store_true", help="Print explanation")
+    parser.add_argument("-e", "--explain", action="store_true", help="Print explanation for each AI placement")
     args = parser.parse_args()
     fivecardtime = args.fivecardtime
     onecardtime = args.onecardtime

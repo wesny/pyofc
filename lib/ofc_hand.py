@@ -1,9 +1,8 @@
-#!/usr/bin/env python
-
 from lib.deuces import Card, Evaluator
 
 evaluator = Evaluator()
 
+# Represents a hand object
 class Hand:
 
     def __init__(self, player_name):
@@ -50,6 +49,7 @@ class Hand:
         else:
             return top_count + middle_count + bottom_count
 
+# Deals with specific evaluation of hands for scoring
 def return_hand_vals(computer_hand, player_hand):
     c_top = evaluator.evaluate([], computer_hand.top)
     c_middle = evaluator.evaluate([], computer_hand.middle)

@@ -14,6 +14,7 @@ def make_straight(cardsUsed, rank):
     newCards[rank+1] = 1
     return 5 == reduce(lambda prev, next: _find_straight(prev, next), newCards)
 
+# Allows Deuces to evaluate 3 card hands
 def fill_hand(hand):
     cardsUsed = [0 for i in xrange(13)]
     for card in hand:
