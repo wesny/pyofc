@@ -5,6 +5,8 @@ __pyOFC__ allows users to play Open Face Chinese Poker against an advanced and r
 
 _Markdown and HTML versions of this README are available in the source distribution._
 
+[Github Link](https://github.com/wesny/pyofc)
+
 #### Author
 Sweyn Venderbush  
 sv298  
