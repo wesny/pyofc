@@ -6,9 +6,9 @@ __pyOFC__ allows users to play Open Face Chinese Poker against an advanced and r
 _Markdown and HTML versions of this README are available in the source distribution._
 
 #### Author
-Sweyn Venderbush
-sv298
-sweyn.venderbush@yale.edu
+Sweyn Venderbush  
+sv298  
+sweyn.venderbush@yale.edu  
 
 #### Goal
 While a lot of work has been done on game trees for more traditional variants of poker (for example, Limit Texas Hold-me is pretty much considered solved and a team of Carnegie Mellon tested [their poker bot against top players](http://www.wired.com/2015/05/humans-play-ai-texas-hold-em-now/) this past summer), very little work has been done on Open Face Chinese Poker. In part, this because it is a new game and played much less than Texas Holdem, but nonetheless is an incredibly interesting challenge. My goal was to explore the approaches used in poker game trees in general, with focus on the OFC game tree and attempt to come up with some strategies for a potential path to a solution for basic OFC. This project is very much not a solution to OFC but does point out some interesting challenges involved and plays at a pretty decent level, beating beginner and some intermediate players.
